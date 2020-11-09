@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./frontend/assets/libs/bootstrap/css/bootstrap.min.css">
+    <title>Prueba</title>
+</head>
+<style>
+    th { white-space: nowrap; }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Prueba</a>
+      </nav>
+    <div class="container mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form id="date">
+                    <label >Fecha Inicio :</label>
+                    <div class="form-group">
+                    <input type="date" id="dateStart" name="dateStart" class="form-control">
+                    </div>
+                    <div class="form-group">
+                    <label >Fecha Fin :</label>
+                    <input type="date" id="dateEnd" name="dateEnd" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                    </form><br>
+                </div>
+            </div>
+        </div>   
+            <div class="row">
+                <div class="form-group col-sm">
+                    <label for="exampleFormControlSelect1">Tipo de Moneda</label>
+                    <select class="form-control" id="typeCoin">
+                        <!-- Datos dinamicos generados en INDEX.js linea 81 -->
+                    </select>
+                </div>
+                <div class="form-group col-sm">
+                    <label for="exampleFormControlSelect1">Tipo de Pago</label>
+                    <select class="form-control" id="typePayment">
+                    <!-- Datos dinamicos generados en INDEX.js linea 95 -->
+                    </select>
+                </div>
+            </div>
+    </div>
+
+    <div class="container mt-5">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead class="thead-dark">
+                <tr class="text-center">
+                    <th>Referencia</th>
+                    <th>Fecha</th>
+                    <th>Moneda</th>
+                    <th>Tipo de pago</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-dinamico">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th id="total"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <br><br><br>
+
+    <script src="./frontend/assets/libs/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./frontend/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./frontend/assets/libs/axios/axios.js"></script>
+    <script src="./frontend/js/index.js"></script>
+</body>
+</html>
